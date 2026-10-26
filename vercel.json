@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "buildCommand": "mkdir -p public && cp -r web/* public/ && cp -r assets public/assets && cp -r data public/data",
-  "outputDirectory": "public",
-  "rewrites": [
-    { "source": "/api/v1/(.*)", "destination": "/api/index" }
-  ]
-}
