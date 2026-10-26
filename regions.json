@@ -1,0 +1,83 @@
+{
+  "regions": [
+    {
+      "id": "nav-brand",
+      "kind": "text",
+      "box": [30, 18, 290, 30],
+      "note": "TNC · THE NUCLEAR CLUB brand title"
+    },
+    {
+      "id": "nav-links",
+      "kind": "control",
+      "box": [765, 18, 585, 30],
+      "note": "Navigation bar links Open Play Tournaments Membership Gallery Sign In"
+    },
+    {
+      "id": "hero-headline",
+      "kind": "text",
+      "box": [28, 96, 735, 110],
+      "note": "PLAY ATOMIC. JAKARTA'S CURATED TENNIS CLUB. display headline"
+    },
+    {
+      "id": "stats-strip",
+      "kind": "text",
+      "box": [28, 230, 835, 67],
+      "note": "Metrics strip 420+ ACTIVE MEMBERS 18 WEEKLY SESSIONS 4 PARTNER COURTS"
+    },
+    {
+      "id": "court-rally-plate",
+      "kind": "plate",
+      "box": [30, 317, 833, 265],
+      "bleed": true,
+      "note": "Wide photograph of players rallying on an olive-green tennis court"
+    },
+    {
+      "id": "schedule-table",
+      "kind": "text",
+      "box": [28, 608, 836, 152],
+      "note": "Four-row schedule list SCHEDULE SENAYAN COURT 1 19:00 PM KEMANG COURT 2 20:00 PM"
+    },
+    {
+      "id": "booking-heading",
+      "kind": "text",
+      "box": [935, 110, 360, 65],
+      "note": "LIVE SESSION & TOURNAMENT BOOKING panel heading"
+    },
+    {
+      "id": "booking-tabs",
+      "kind": "control",
+      "box": [936, 200, 397, 38],
+      "note": "Segmented tab selector OPEN PLAY TOURNAMENT COACHING"
+    },
+    {
+      "id": "session-row-1",
+      "kind": "control",
+      "box": [936, 256, 397, 69],
+      "note": "Session selector SENAYAN COURT 1 19:00 3 SLOTS LEFT with volt progress bar"
+    },
+    {
+      "id": "session-row-2",
+      "kind": "control",
+      "box": [936, 333, 397, 69],
+      "note": "Session selector KEMANG COURT 2 20:00 5 SLOTS LEFT with volt progress bar"
+    },
+    {
+      "id": "qr-pass-box",
+      "kind": "control",
+      "box": [936, 519, 250, 96],
+      "note": "QR code pass badge and QR COURT PASS label"
+    },
+    {
+      "id": "booking-price-line",
+      "kind": "text",
+      "box": [936, 645, 397, 22],
+      "note": "QR COURT PASS and IDR 125.000 / PLAYER summary line"
+    },
+    {
+      "id": "booking-cta",
+      "kind": "control",
+      "box": [936, 678, 397, 50],
+      "note": "Optic volt button BOOK SLOT & PAY QRIS"
+    }
+  ]
+}

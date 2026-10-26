@@ -1,0 +1,26 @@
+name: TNC Staging & Production CI
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main, staging]
+
+jobs:
+  verify-and-build:
+    name: Go Test & Production Binary Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go 1.22
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Run concurrency & booking API tests
+        run: go test -v -race ./cmd/tnc-server
+
+      - name: Build production binary
+        run: go build -v -o tnc-server ./cmd/tnc-server

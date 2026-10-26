@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TNC · THE NUCLEAR CLUB — Brew Energy, Stories and Science (radiasi.id)</title>
+  <meta name="description" content="The NUCLEAR Club (TNC) Yogyakarta — Komunitas olahraga Tennis, Padel, Yoga & Running. Brew Energy, Stories and Science. Jadwal main di Lapangan Tennis UNY, GPW & Joi Sport and Social." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&family=Archivo:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body id="top">
+  <!-- TOP NAVIGATION BAR -->
+  <header class="site-header">
+    <div class="club-container site-header-inner">
+      <a href="#top" class="nav-brand-text">TNC · THE NUCLEAR CLUB</a>
+      <nav class="site-nav" aria-label="Primary Navigation">
+        <a href="#about" class="nav-link-item">About TNC</a>
+        <a href="#open-play" class="nav-link-item">Schedules</a>
+        <a href="#booking-flow" class="nav-link-item">QRIS &amp; Reclub</a>
+        <a href="#gallery" class="nav-link-item">Venues</a>
+        <span class="nav-link-divider" aria-hidden="true"></span>
+        <a href="https://reclub.co/clubs/@the-nuclear-club-tnc" target="_blank" rel="noopener noreferrer" class="nav-reclub-pill">Reclub: IBBDG</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FIRST VIEWPORT: EDITORIAL LEFT + SAGE/BUNKER BOOKING CONSOLE RIGHT -->
+  <main class="hero-section">
+    <div class="club-container hero-split-grid">
+      <!-- LEFT COLUMN: Headline, Stats, Community/3D Plate, Weekly Schedule -->
+      <div class="hero-left-col">
+        <section class="hero-headline-block">
+          <h1 class="hero-headline-text">BREW ENERGY, STORIES<br />AND SCIENCE.</h1>
+        </section>
+
+        <!-- Stats Strip -->
+        <section class="hero-stats-strip" aria-label="Club Statistics">
+          <div class="stat-group">
+            <span class="stat-number">30+</span>
+            <span class="stat-label">ACTIVE<br />MEMBERS</span>
+          </div>
+          <div class="stat-group">
+            <span class="stat-number">3</span>
+            <span class="stat-label">WEEKLY<br />SESSIONS</span>
+          </div>
+          <div class="stat-group">
+            <span class="stat-number">3</span>
+            <span class="stat-label">YOGYAKARTA<br />VENUES</span>
+          </div>
+        </section>
+
+        <!-- Community Photo + Rally Action + 3D Court Switcher -->
+        <figure class="hero-plate-wrap" id="hero-court-plate">
+          <div class="hero-plate-frame">
+            <img id="hero-plate-img" src="../assets/club/tnc-hero-night.jpg" alt="Komunitas The Nuclear Club (TNC) Yogyakarta di lapangan tenis malam hari" />
+            <canvas id="hero-three-canvas" class="hero-three-canvas" aria-label="Interactive 3D Tennis Court Rally Simulation"></canvas>
+
+            <div class="plate-hud-top">
+              <div class="plate-mode-switch" role="group" aria-label="Court View Mode">
+                <button type="button" class="plate-mode-btn is-active" data-view-mode="community">TNC COMMUNITY</button>
+                <button type="button" class="plate-mode-btn" data-view-mode="rally">COURT RALLY</button>
+                <button type="button" class="plate-mode-btn" data-view-mode="3d">3D HAWK-EYE</button>
+              </div>
+              <div class="plate-telemetry-badge" id="hero-hawkeye-readout">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                <span id="hero-telemetry-text">SELASA · LAP. TENNIS UNY · 18:00 WIB</span>
+              </div>
+            </div>
+
+            <div class="plate-camera-bar" id="hero-camera-bar" hidden>
+              <button type="button" class="cam-pill is-active" data-cam-preset="baseline">BASELINE VIEW</button>
+              <button type="button" class="cam-pill" data-cam-preset="overhead">HAWK-EYE TOP</button>
+              <button type="button" class="cam-pill" data-cam-preset="umpire">UMPIRE CHAIR</button>
+            </div>
+          </div>
+        </figure>
+
+        <!-- Official Yogyakarta Weekly Schedule Table -->
+        <section class="hero-schedule-table" aria-label="Upcoming Court Schedule">
+          <div class="sched-row is-active-sched" data-select-cat="open-play" data-select-index="0">
+            <span class="sched-col-tag">SELASA · TENNIS</span>
+            <span class="sched-col-court">LAPANGAN TENNIS UNY</span>
+            <span class="sched-col-time">18:00–20:00 WIB</span>
+          </div>
+          <div class="sched-row" data-select-cat="open-play" data-select-index="1">
+            <span class="sched-col-tag">JUMAT · TENNIS</span>
+            <span class="sched-col-court">LAPANGAN TENNIS UNY</span>
+            <span class="sched-col-time">20:00–22:00 WIB</span>
+          </div>
+          <div class="sched-row" data-select-cat="open-play" data-select-index="2">
+            <span class="sched-col-tag">SABTU · TENNIS</span>
+            <span class="sched-col-court">LAPANGAN TENNIS GPW</span>
+            <span class="sched-col-time">20:00–22:00 WIB</span>
+          </div>
+          <div class="sched-row" data-select-cat="coaching" data-select-index="0">
+            <span class="sched-col-tag">COACHING CLINIC</span>
+            <span class="sched-col-court">COACH FERIO &amp; GATHFAN</span>
+            <span class="sched-col-time">NEWBIE &amp; BEGINNER</span>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN: Sage Backdrop + Dark Bunker Live Booking Console -->
+      <aside class="hero-right-col" aria-label="Live Session & Reclub QRIS Booking">
+        <div class="bunker-console-card">
+          <header class="bunker-console-header">
+            <h2 class="booking-heading-text">LIVE SESSION &amp;<br />RECLUB QRIS BOOKING</h2>
+          </header>
+
+          <!-- Category Tabs -->
+          <div class="booking-tabs-bar" role="tablist" aria-label="Booking Category">
+            <button type="button" role="tab" aria-selected="true" class="tab-btn tab-btn-active" data-tab="open-play">OPEN PLAY</button>
+            <button type="button" role="tab" aria-selected="false" class="tab-btn" data-tab="coaching">COACHING</button>
+            <button type="button" role="tab" aria-selected="false" class="tab-btn" data-tab="multisport">MULTI-SPORT</button>
+          </div>
+
+          <!-- Session Cards -->
+          <div class="bunker-sessions-stack">
+            <div class="session-card-box is-selected" id="hero-card-1" data-card-index="0">
+              <div class="session-card-top">
+                <span class="session-court-title" id="hero-title-1">SELASA · LAP. TENNIS UNY (18:00)</span>
+                <span class="session-slots-left" id="hero-slots-1">3 SLOTS LEFT</span>
+              </div>
+              <div class="session-bar-track">
+                <div class="session-bar-fill" id="hero-bar-1" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="session-card-box" id="hero-card-2" data-card-index="1">
+              <div class="session-card-top">
+                <span class="session-court-title" id="hero-title-2">JUMAT · LAP. TENNIS UNY (20:00)</span>
+                <span class="session-slots-left" id="hero-slots-2">4 SLOTS LEFT</span>
+              </div>
+              <div class="session-bar-track">
+                <div class="session-bar-fill" id="hero-bar-2" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Session Telemetry & Player Name Strip -->
+          <div class="booking-telemetry-inner">
+            <div class="telemetry-meta-row">
+              <span class="telemetry-pill" id="hero-surface-pill">INDOOR &amp; OUTDOOR · NIGHT LIGHTS</span>
+              <span class="telemetry-time" id="hero-time-pill">SEL · 18:00–20:00 WIB</span>
+            </div>
+            <div class="telemetry-input-row">
+              <label for="quick-player-name" class="telemetry-input-label">PLAYER NAME</label>
+              <input type="text" id="quick-player-name" class="telemetry-name-input" placeholder="Ketik Nama Anda untuk WA Admin" maxlength="32" />
+            </div>
+          </div>
+
+          <div class="bunker-console-divider" aria-hidden="true"></div>
+
+          <!-- Official AMONG.BREW QRIS Square -->
+          <div class="qr-pass-row">
+            <div class="qr-white-tile" id="hero-qr-trigger" title="Klik untuk melihat QRIS Resmi AMONG.BREW - BEVERAGES ukuran penuh">
+              <img id="hero-qris-img" src="../assets/club/qris-square.jpg" alt="QRIS Resmi TNC - AMONG.BREW BEVERAGES" class="qr-real-img" />
+            </div>
+            <div class="qr-side-info">
+              <span class="qr-side-caption" id="qr-pass-serial">QRIS AMONG.BREW</span>
+              <span class="qr-side-sub" id="qr-pass-sub">NMID: ID1026508193129 · RECLUB IBBDG</span>
+              <button type="button" id="open-pass-preview-btn" class="qr-inspect-link">OPEN FULL QRIS &amp; WA ADMIN →</button>
+            </div>
+          </div>
+
+          <!-- Price Line & Primary CTA -->
+          <div class="bunker-console-footer">
+            <div class="price-line-inner">
+              <span id="selected-pass-label">OPEN PLAY / FUN RALLY</span>
+              <span id="selected-session-price">IDR 50.000 – 85.000 / ORANG</span>
+            </div>
+            <button type="button" id="hero-book-btn" class="cta-volt-btn">BOOK SLOT · QRIS &amp; WA ADMIN</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- QUICK FILTER BAR -->
+  <section class="filter-console-band" aria-label="Session Filter Console">
+    <div class="club-container">
+      <form id="schedule-filter-form" class="filter-console-grid">
+        <div class="filter-field">
+          <label for="filter-mode">Activity &amp; Session Format</label>
+          <select id="filter-mode" class="filter-select">
+            <option value="all">ALL SESSIONS (OPEN PLAY &amp; COACHING)</option>
+            <option value="open-play">OPEN PLAY / FUN RALLY (50K–85K)</option>
+            <option value="coaching">COACHING CLINIC (85K–100K)</option>
+            <option value="multisport">PADEL · YOGA · RUNNING</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="filter-court">Yogyakarta Venue</label>
+          <select id="filter-court" class="filter-select">
+            <option value="all">UNY, GPW &amp; JOI SPORT SOCIAL</option>
+            <option value="UNY">LAPANGAN TENNIS UNY</option>
+            <option value="GPW">LAPANGAN TENNIS GPW</option>
+            <option value="JOI">JOI SPORT AND SOCIAL</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="filter-level">Participant Category</label>
+          <select id="filter-level" class="filter-select">
+            <option value="all">ALL LEVELS (NEWBIE &amp; BEGINNER)</option>
+            <option value="NEWBIE">NEWBIE (FIRST-TIMER WELCOME)</option>
+            <option value="BEGINNER">BEGINNER (FUN RALLY)</option>
+          </select>
+        </div>
+        <div class="filter-btn-wrap">
+          <button type="submit" class="filter-action-btn">FILTER JADWAL</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- SECTION 1: ABOUT TNC & PHILOSOPHY ("BREW ENERGY, STORIES AND SCIENCE") -->
+  <section id="about" class="club-section">
+    <div class="club-container">
+      <div class="section-header-row">
+        <h2 class="section-title">THE NUCLEAR CLUB · EST. 2026 YOGYAKARTA</h2>
+        <p class="section-lead">
+          The NUCLEAR Club (TNC) merupakan komunitas olahraga yang menghadirkan berbagai aktivitas untuk mempertemukan orang-orang melalui olahraga, koneksi, dan pengalaman bersama. TNC tidak hanya berfokus pada <strong>Tennis</strong>, tetapi juga menaungi <strong>Padel, Yoga, Running</strong>, serta kegiatan olahraga sosial lainnya.
+        </p>
+      </div>
+
+      <!-- 4 Pillars of "Brew Energy, Stories and Science." -->
+      <div class="philosophy-grid">
+        <article class="philosophy-col">
+          <h3 class="philosophy-word">01 · BREW</h3>
+          <p class="philosophy-desc">Mempertemukan berbagai latar belakang orang dan pengalaman di lapangan untuk meracik suasana komunitas yang hangat dan unik.</p>
+        </article>
+        <article class="philosophy-col">
+          <h3 class="philosophy-word">02 · ENERGY</h3>
+          <p class="philosophy-desc">Melambangkan semangat bergerak, keringat positif, dan koneksi yang tumbuh secara organik dari setiap sesi olahraga bersama.</p>
+        </article>
+        <article class="philosophy-col">
+          <h3 class="philosophy-word">03 · STORIES</h3>
+          <p class="philosophy-desc">Mewakili cerita, pertemanan baru, obrolan sambil minum kopi susu, dan momen berkesan yang tercipta di setiap pertemuan.</p>
+        </article>
+        <article class="philosophy-col">
+          <h3 class="philosophy-word">04 · SCIENCE</h3>
+          <p class="philosophy-desc">Mencerminkan rasa penasaran, eksplorasi teknik bersama Coach, dan keberanian bagi Newbie maupun Beginner untuk mencoba hal baru.</p>
+        </article>
+      </div>
+
+      <!-- All-In Session Facilities & Coaches Strip -->
+      <div class="inclusions-bunker-box">
+        <div class="inclusions-header">
+          <div>
+            <h3 class="inclusions-title">8 FASILITAS LENGKAP DI SETIAP SESI TNC</h3>
+            <p class="inclusions-sub">Terbuka untuk kategori <strong>Newbie &amp; Beginner</strong> · Didampingi langsung oleh <strong>Coach Ferio Anggita</strong> &amp; <strong>Coach Gathfan Darmawan</strong>.</p>
+          </div>
+          <a href="https://reclub.co/clubs/@the-nuclear-club-tnc" target="_blank" rel="noopener noreferrer" class="inclusions-cta">JOIN RECLUB · KODE: IBBDG ↗</a>
+        </div>
+
+        <div class="inclusions-grid">
+          <div class="inclusion-item">
+            <span class="inclusion-num">01</span>
+            <span class="inclusion-text">3 Jam Lapangan (Indoor / Outdoor)</span>
+          </div>
+          <div class="inclusion-item">
+            <span class="inclusion-num">02</span>
+            <span class="inclusion-text">Fresh Balls Melimpah</span>
+          </div>
+          <div class="inclusion-item">
+            <span class="inclusion-num">03</span>
+            <span class="inclusion-text">Post-Game Consultation dengan Coach</span>
+          </div>
+          <div class="inclusion-item">
+            <span class="inclusion-num">04</span>
+            <span class="inclusion-text">E-Book Petunjuk Bermain Tenis Lapangan</span>
+          </div>
+          <div class="inclusion-item">
+            <span class="inclusion-num">05</span>
+            <span class="inclusion-text">Ballboy Dedicated (untuk 6+ Players)</span>
+          </div>
+          <div class="inclusion-item">
+            <span class="inclusion-num">06</span>
+            <span class="inclusion-text">Kopi Susu &amp; Beverage (Jika Full Slot)</span>
+          </div>
+          <div class="inclusion-item">
+            <span class="inclusion-num">07</span>
+            <span class="inclusion-text">Free Racket Rental (Limited Availability)</span>
+          </div>
+          <div class="inclusion-item">
+            <span class="inclusion-num">08</span>
+            <span class="inclusion-text">Dokumentasi Foto &amp; Video Sesi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: WEEKLY SCHEDULE & COACHING LEDGER (YOGYAKARTA) -->
+  <section id="open-play" class="club-section">
+    <div class="club-container">
+      <div class="section-header-row">
+        <h2 class="section-title">JADWAL RUTIN MINGGUAN &amp; COACHING CLINIC</h2>
+        <p class="section-lead">
+          Pilih jadwal rutin TNC di Lapangan Tennis UNY, Lapangan Tennis GPW, atau Joi Sport and Social. Klik <strong>BOOK &amp; QRIS</strong> untuk melihat QRIS pembayaran dan mengirim konfirmasi langsung ke WhatsApp Admin Filza.
+        </p>
+      </div>
+
+      <div class="ledger-table" id="ledger-list" role="region" aria-label="Session List">
+        <div class="ledger-row ledger-row-head">
+          <span>HARI &amp; JAM</span>
+          <span>SESI &amp; LOKASI LAPANGAN</span>
+          <span>KATEGORI LEVEL</span>
+          <span>KUOTA PEMAIN</span>
+          <span>BIAYA / ORANG</span>
+          <span>AKSI</span>
+        </div>
+
+        <div class="ledger-row" data-mode="open-play" data-court="UNY" data-level="NEWBIE" data-session-id="uny-tuesday">
+          <div class="ledger-cell-Day">SELASA · 18:00–20:00</div>
+          <div>
+            <span class="ledger-cell-Title">TUESDAY TENNIS OPEN PLAY &amp; FUN RALLY</span>
+            <span class="ledger-cell-Sub">Lapangan Tennis UNY (Indoor &amp; Outdoor) · Fresh Balls, Kopi Susu &amp; Free Racket Limited</span>
+          </div>
+          <div><span class="ntrp-pill">NEWBIE &amp; BEGINNER</span></div>
+          <div class="capacity-inline">
+            <span class="capacity-text" data-ledger-slots="uny-tuesday" data-total="10">8–10 ORANG / SESI</span>
+            <div class="capacity-bar"><div class="capacity-bar-inner" data-ledger-bar="uny-tuesday" style="width: 75%"></div></div>
+          </div>
+          <div class="ledger-price">IDR 50K – 85K</div>
+          <div>
+            <button type="button" class="ledger-book-btn" data-quick-lock="uny-tuesday">BOOK &amp; QRIS</button>
+          </div>
+        </div>
+
+        <div class="ledger-row" data-mode="open-play" data-court="UNY" data-level="BEGINNER" data-session-id="uny-friday">
+          <div class="ledger-cell-Day">JUMAT · 20:00–22:00</div>
+          <div>
+            <span class="ledger-cell-Title">FRIDAY NIGHT NUCLEAR TENNIS SESSION</span>
+            <span class="ledger-cell-Sub">Lapangan Tennis UNY · Night Floodlights, Ballboy (6+ Players), Dokumentasi &amp; Kopi Susu</span>
+          </div>
+          <div><span class="ntrp-pill">NEWBIE &amp; BEGINNER</span></div>
+          <div class="capacity-inline">
+            <span class="capacity-text" data-ledger-slots="uny-friday" data-total="10">8–10 ORANG / SESI</span>
+            <div class="capacity-bar"><div class="capacity-bar-inner" data-ledger-bar="uny-friday" style="width: 80%"></div></div>
+          </div>
+          <div class="ledger-price">IDR 50K – 85K</div>
+          <div>
+            <button type="button" class="ledger-book-btn" data-quick-lock="uny-friday">BOOK &amp; QRIS</button>
+          </div>
+        </div>
+
+        <div class="ledger-row" data-mode="open-play" data-court="GPW" data-level="BEGINNER" data-session-id="gpw-saturday">
+          <div class="ledger-cell-Day">SABTU · 20:00–22:00</div>
+          <div>
+            <span class="ledger-cell-Title">SATURDAY NIGHT SOCIAL RALLY @ GPW</span>
+            <span class="ledger-cell-Sub">Lapangan Tennis GPW (Outdoor Floodlit) · Fresh Balls, Post-Game Consult &amp; Beverage</span>
+          </div>
+          <div><span class="ntrp-pill">NEWBIE &amp; BEGINNER</span></div>
+          <div class="capacity-inline">
+            <span class="capacity-text" data-ledger-slots="gpw-saturday" data-total="10">8–10 ORANG / SESI</span>
+            <div class="capacity-bar"><div class="capacity-bar-inner" data-ledger-bar="gpw-saturday" style="width: 65%"></div></div>
+          </div>
+          <div class="ledger-price">IDR 50K – 85K</div>
+          <div>
+            <button type="button" class="ledger-book-btn" data-quick-lock="gpw-saturday">BOOK &amp; QRIS</button>
+          </div>
+        </div>
+
+        <div class="ledger-row" data-mode="coaching" data-court="UNY" data-level="NEWBIE" data-session-id="coaching-ferio">
+          <div class="ledger-cell-Day">COACHING · UNY / GPW</div>
+          <div>
+            <span class="ledger-cell-Title">COACHING CLINIC · COACH FERIO ANGGITA &amp; COACH GATHFAN DARMAWAN</span>
+            <span class="ledger-cell-Sub">3 Jam Lapangan · E-Book Petunjuk Tenis · Post-Game Consultation · Free Racket Rental</span>
+          </div>
+          <div><span class="ntrp-pill">KELAS PEMULA (NEWBIE)</span></div>
+          <div class="capacity-inline">
+            <span class="capacity-text" data-ledger-slots="coaching-ferio" data-total="8">3–8 ORANG / SESI</span>
+            <div class="capacity-bar"><div class="capacity-bar-inner" data-ledger-bar="coaching-ferio" style="width: 75%"></div></div>
+          </div>
+          <div class="ledger-price">IDR 85K – 100K</div>
+          <div>
+            <button type="button" class="ledger-book-btn" data-quick-lock="coaching-ferio">BOOK &amp; QRIS</button>
+          </div>
+        </div>
+
+        <div class="ledger-row" data-mode="multisport" data-court="JOI" data-level="NEWBIE" data-session-id="multisport-social">
+          <div class="ledger-cell-Day">SOCIAL · MULTI-SPORT</div>
+          <div>
+            <span class="ledger-cell-Title">TNC PADEL, YOGA &amp; RUNNING EXPERIENCE</span>
+            <span class="ledger-cell-Sub">Joi Sport and Social &amp; Yogyakarta Grounds · Eksplorasi Olahraga &amp; Koneksi Komunitas</span>
+          </div>
+          <div><span class="ntrp-pill">ALL LEVELS WELCOME</span></div>
+          <div class="capacity-inline">
+            <span class="capacity-text" data-ledger-slots="multisport-social" data-total="12">OPEN COMMUNITY SLOT</span>
+            <div class="capacity-bar"><div class="capacity-bar-inner" data-ledger-bar="multisport-social" style="width: 60%"></div></div>
+          </div>
+          <div class="ledger-price">VIA RECLUB</div>
+          <div>
+            <button type="button" class="ledger-book-btn" data-quick-lock="multisport-social">BOOK &amp; QRIS</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empty Filter State -->
+      <div id="ledger-empty-state" class="ledger-empty-state" hidden>
+        <p>Tidak ada jadwal yang cocok dengan filter tersebut.</p>
+        <button type="button" id="reset-filter-btn" class="ledger-book-btn">RESET FILTER</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: ALUR BOOKING RESMI (RECLUB IBBDG + QRIS AMONG.BREW + WA ADMIN FILZA) -->
+  <section id="booking-flow" class="club-section club-section-dark">
+    <div class="club-container">
+      <div class="section-header-row">
+        <h2 class="section-title">ALUR BOOKING RECLUB, QRIS &amp; KONFIRMASI ADMIN</h2>
+        <p class="section-lead">
+          Pendaftaran sesi olahraga TNC terintegrasi dengan aplikasi <strong>Reclub (Club Code: IBBDG)</strong>, pembayaran <strong>QRIS Resmi (AMONG.BREW - BEVERAGES)</strong>, dan verifikasi langsung ke WhatsApp Admin TNC.
+        </p>
+      </div>
+
+      <div class="tournament-layout">
+        <div>
+          <ul class="tournament-spec-list">
+            <li class="tournament-spec-item">
+              <span class="tournament-spec-label">1. Join Komunitas di Reclub</span>
+              <span class="tournament-spec-val">CLUB CODE: IBBDG</span>
+            </li>
+            <li class="tournament-spec-item">
+              <span class="tournament-spec-label">2. Merchant QRIS Resmi</span>
+              <span class="tournament-spec-val">AMONG.BREW - BEVERAGES</span>
+            </li>
+            <li class="tournament-spec-item">
+              <span class="tournament-spec-label">3. NMID &amp; Terminal ID</span>
+              <span class="tournament-spec-val">ID1026508193129 · A01</span>
+            </li>
+            <li class="tournament-spec-item">
+              <span class="tournament-spec-label">4. Admin Verifikasi WhatsApp</span>
+              <span class="tournament-spec-val">FILZA NAYLA HAZIQA (0812-2985-8442)</span>
+            </li>
+            <li class="tournament-spec-item">
+              <span class="tournament-spec-label">5. Tarif Sesi Rutin</span>
+              <span class="tournament-spec-val">OPEN PLAY 50K–85K · COACHING 85K–100K</span>
+            </li>
+          </ul>
+
+          <!-- Direct WhatsApp Confirmation Form -->
+          <form id="wa-confirm-form" class="tournament-reg-form">
+            <input type="text" id="wa-player-name" class="tnc-input" placeholder="Nama Lengkap Anda" required />
+            <select id="wa-session-select" class="tnc-input" aria-label="Pilih Jadwal Sesi">
+              <option value="Selasa 18.00-20.00 WIB @ Lapangan Tennis UNY (Open Play)">Selasa 18.00–20.00 @ UNY (Open Play)</option>
+              <option value="Jumat 20.00-22.00 WIB @ Lapangan Tennis UNY (Open Play)">Jumat 20.00–22.00 @ UNY (Open Play)</option>
+              <option value="Sabtu 20.00-22.00 WIB @ Lapangan Tennis GPW (Open Play)">Sabtu 20.00–22.00 @ GPW (Open Play)</option>
+              <option value="Coaching Clinic (Coach Ferio Anggita / Coach Gathfan Darmawan)">Coaching Clinic (Coach Ferio / Gathfan)</option>
+            </select>
+            <button type="submit" class="tournament-submit-btn">KIRIM KONFIRMASI BOOKING KE WA ADMIN FILZA →</button>
+          </form>
+
+          <div class="community-cta-strip">
+            <a href="https://reclub.co/clubs/@the-nuclear-club-tnc" target="_blank" rel="noopener noreferrer" class="community-link-pill">BUKA RECLUB TNC (CODE: IBBDG) ↗</a>
+            <a href="https://chat.whatsapp.com/E3K2G5PkS166wiQIDrRWr2?s=cl&p=a&mlu=4&ilr=4" target="_blank" rel="noopener noreferrer" class="community-link-pill">GABUNG GRUP WHATSAPP TNC ↗</a>
+          </div>
+        </div>
+
+        <!-- Official Full QRIS Display + Step-by-Step Guide -->
+        <div class="qris-showcase-split">
+          <div class="qris-card-frame">
+            <img src="../assets/club/qris-tnc.jpg" alt="QRIS Resmi TNC - AMONG.BREW BEVERAGES NMID ID1026508193129" class="qris-full-img" />
+          </div>
+          <div class="qris-steps-col">
+            <h3 class="bracket-column-title">CARA BOOKING &amp; VERIFIKASI SLOT</h3>
+            <div class="matchup-pair">
+              <div class="step-card-title">STEP 01 · PILIH SESI DI RECLUB</div>
+              <p class="step-card-desc">Gabung ke <strong>The Nuclear™ Club (TNC)</strong> di aplikasi Reclub (kode klub: <strong>IBBDG</strong>) dan pilih jadwal sesi sesuai ketersediaan slot.</p>
+            </div>
+            <div class="matchup-pair">
+              <div class="step-card-title">STEP 02 · SCAN QRIS AMONG.BREW</div>
+              <p class="step-card-desc">Lakukan pembayaran sesuai tarif sesi (Open Play Rp50.000–85.000 atau Coaching Rp85.000–100.000) melalui QRIS di samping.</p>
+            </div>
+            <div class="matchup-pair">
+              <div class="step-card-title">STEP 03 · KIRIM BUKTI KE ADMIN FILZA</div>
+              <p class="step-card-desc">Kirim bukti transfer QRIS ke WhatsApp Admin <strong>Filza Nayla Haziqa (0812-2985-8442)</strong> untuk menerima konfirmasi slot resmi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: YOGYAKARTA PARTNER VENUES, 3D COURT TELEMETRY & COMMUNITY GALLERY -->
+  <section id="gallery" class="club-section">
+    <div class="club-container">
+      <div class="section-header-row">
+        <h2 class="section-title">LOKASI LAPANGAN YOGYAKARTA &amp; DOKUMENTASI KOMUNITAS</h2>
+        <p class="section-lead">
+          Seluruh aktivitas rutin TNC berlangsung di tiga lokasi pilihan di Yogyakarta: <strong>Lapangan Tennis UNY</strong>, <strong>Lapangan Tennis GPW</strong>, dan <strong>Joi Sport and Social</strong>. Klik lokasi di bawah untuk melihat simulasi 3D lapangan dan fasilitasnya.
+        </p>
+      </div>
+
+      <!-- Interactive Three.js 3D Arena Stage -->
+      <div class="three-arena-stage">
+        <canvas id="arena-three-canvas" class="arena-three-canvas" aria-label="3D Tennis Court Surface & Trajectory Simulator"></canvas>
+        <div class="arena-overlay-bar">
+          <div class="arena-telemetry-group">
+            <span class="arena-stat-chip" id="arena-court-label">LAPANGAN TENNIS UNY · INDOOR &amp; OUTDOOR COURTS</span>
+            <span class="arena-stat-chip arena-stat-volt" id="arena-pace-label">SELASA 18:00–20:00 &amp; JUMAT 20:00–22:00 WIB · TRIBUN &amp; COFFEE SHOP</span>
+          </div>
+          <div class="arena-cam-controls">
+            <button type="button" class="arena-cam-btn is-active" data-arena-cam="orbit">ORBIT 360°</button>
+            <button type="button" class="arena-cam-btn" data-arena-cam="baseline">PLAYER POV</button>
+            <button type="button" class="arena-cam-btn" data-arena-cam="hawkeye">SIDE UMPIRE</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="courts-roster-grid courts-roster-3col" id="courts-selector-grid">
+        <article class="court-column is-selected-court" data-court-surface="uny" tabindex="0">
+          <div class="court-column-top">
+            <h3 class="court-zone-title">LAPANGAN TENNIS UNY</h3>
+            <span class="court-surface-tag">INDOOR &amp; OUTDOOR</span>
+          </div>
+          <p class="court-zone-meta">Jadwal Selasa (18.00–20.00) &amp; Jumat (20.00–22.00) · Pencahayaan Malam · Tribun · Kantin/Coffee Shop · Toilet &amp; Parkir Luas.</p>
+        </article>
+        <article class="court-column" data-court-surface="gpw" tabindex="0">
+          <div class="court-column-top">
+            <h3 class="court-zone-title">LAPANGAN TENNIS GPW</h3>
+            <span class="court-surface-tag">OUTDOOR FLOODLIT</span>
+          </div>
+          <p class="court-zone-meta">Jadwal Sabtu Malam (20.00–22.00) · Lapangan Outdoor dengan Pencahayaan Malam · Toilet · Area Parkir Nyaman.</p>
+        </article>
+        <article class="court-column" data-court-surface="joi" tabindex="0">
+          <div class="court-column-top">
+            <h3 class="court-zone-title">JOI SPORT AND SOCIAL</h3>
+            <span class="court-surface-tag">INDOOR SOCIAL COURT</span>
+          </div>
+          <p class="court-zone-meta">Lapangan Indoor · Pencahayaan Malam · Kantin/Coffee Shop &amp; Social Space · Toilet · Parkir Luas.</p>
+        </article>
+      </div>
+
+      <!-- Real TNC Yogyakarta Community Photo Archive -->
+      <div class="tnc-photo-grid">
+        <figure class="tnc-photo-item tnc-photo-wide">
+          <img src="../assets/club/tnc-hero-night.jpg" alt="Sesi Malam The Nuclear Club Yogyakarta" loading="lazy" />
+          <figcaption class="tnc-photo-caption">
+            <span>TNC NIGHT RALLY · YOGYAKARTA</span>
+            <span class="caption-volt">“BREW ENERGY, STORIES AND SCIENCE.”</span>
+          </figcaption>
+        </figure>
+        <figure class="tnc-photo-item">
+          <img src="../assets/club/tnc-uny-group.jpg" alt="Sesi Komunitas TNC di Lapangan Tennis UNY" loading="lazy" />
+          <figcaption class="tnc-photo-caption">
+            <span>LAPANGAN TENNIS UNY</span>
+            <span class="caption-volt">OPEN PLAY &amp; FUN RALLY</span>
+          </figcaption>
+        </figure>
+        <figure class="tnc-photo-item">
+          <img src="../assets/club/tnc-indoor-group.jpg" alt="Sesi Indoor The Nuclear Club Yogyakarta" loading="lazy" />
+          <figcaption class="tnc-photo-caption">
+            <span>INDOOR COURT SESSION</span>
+            <span class="caption-volt">NEWBIE &amp; BEGINNER</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="club-footer">
+    <div class="club-container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">TNC · THE NUCLEAR CLUB (RADIASI.ID)</div>
+          <p class="footer-disclaimer">
+            “Brew Energy, Stories and Science.” — Komunitas olahraga Tennis, Padel, Yoga, dan Running di Yogyakarta (Est. 2026). Pendaftaran sesi terintegrasi melalui Reclub (Kode: <strong>IBBDG</strong>), pembayaran QRIS <strong>AMONG.BREW - BEVERAGES</strong>, dan konfirmasi WhatsApp Admin <strong>Filza Nayla Haziqa (0812-2985-8442)</strong>.
+          </p>
+        </div>
+        <ul class="footer-social-links">
+          <li><a href="https://reclub.co/clubs/@the-nuclear-club-tnc" target="_blank" rel="noopener noreferrer">Reclub (IBBDG)</a></li>
+          <li><a href="https://chat.whatsapp.com/E3K2G5PkS166wiQIDrRWr2?s=cl&p=a&mlu=4&ilr=4" target="_blank" rel="noopener noreferrer">Grup WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/the.nuclearclub" target="_blank" rel="noopener noreferrer">Instagram @the.nuclearclub</a></li>
+          <li><a href="https://www.threads.com/@the.nuclearclub" target="_blank" rel="noopener noreferrer">Threads @the.nuclearclub</a></li>
+          <li><a href="https://wa.me/6281229858442" target="_blank" rel="noopener noreferrer">WA Admin Filza</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom-bar">
+        <span>© 2026 TNC · The Nuclear Club Yogyakarta · Powered by Go Engine on radiasi.id</span>
+        <span id="go-api-status">ENGINE STATUS: READY (YOGYAKARTA / GO REST API)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE QRIS & WHATSAPP ADMIN CONFIRMATION MODAL -->
+  <div id="pass-modal" class="pass-modal-backdrop" hidden aria-hidden="true">
+    <div class="pass-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-pass-title">
+      <div class="pass-modal-top">
+        <div>
+          <span class="pass-modal-badge" id="modal-pass-type">OFFICIAL TNC QRIS &amp; RECLUB BOOKING</span>
+          <h3 class="pass-modal-heading" id="modal-pass-title">TNC PASS · #TNC-JGJ-2601</h3>
+        </div>
+        <button type="button" id="close-pass-modal" class="pass-modal-close" aria-label="Close Modal">✕</button>
+      </div>
+
+      <div class="pass-modal-body">
+        <div class="pass-modal-qr-col">
+          <div class="pass-modal-qr-frame">
+            <img id="modal-qris-img" src="../assets/club/qris-tnc.jpg" alt="QRIS AMONG.BREW - BEVERAGES" class="modal-qris-img" />
+          </div>
+          <span class="pass-modal-hash" id="modal-pass-hash">NMID: ID1026508193129 · AMONG.BREW</span>
+        </div>
+
+        <div class="pass-modal-details">
+          <div class="pass-detail-row">
+            <span class="pass-detail-label">NAMA PESERTA</span>
+            <span class="pass-detail-val" id="modal-player-name">TNC MEMBER JOGJA</span>
+          </div>
+          <div class="pass-detail-row">
+            <span class="pass-detail-label">JADWAL &amp; LOKASI SESI</span>
+            <span class="pass-detail-val" id="modal-session-title">SELASA · 18:00–20:00 @ LAPANGAN TENNIS UNY</span>
+          </div>
+          <div class="pass-detail-row">
+            <span class="pass-detail-label">FASILITAS TERMASUK</span>
+            <span class="pass-detail-val" id="modal-surface-tier">3H COURT · FRESH BALLS · KOPI SUSU · E-BOOK · FREE RACKET</span>
+          </div>
+          <div class="pass-detail-row">
+            <span class="pass-detail-label">BIAYA SESI (QRIS)</span>
+            <span class="pass-detail-val pass-detail-volt" id="modal-price-val">IDR 50.000 – 85.000 / ORANG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pass-modal-actions">
+        <a href="https://wa.me/6281229858442" target="_blank" rel="noopener noreferrer" id="modal-wa-admin-btn" class="cta-volt-btn pass-modal-btn">KONFIRMASI BUKTI QRIS KE WA ADMIN FILZA →</a>
+        <button type="button" id="download-pass-png-btn" class="pass-modal-secondary-btn">UNDUH TIKET PNG</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- External Animation & 3D Libraries (GSAP + ScrollTrigger + Three.js) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+{
+  "clubName": "TNC · THE NUCLEAR CLUB",
+  "domain": "radiasi.id",
+  "established": 2026,
+  "city": "Yogyakarta",
+  "tagline": "BREW ENERGY, STORIES AND SCIENCE.",
+  "about": "The NUCLEAR Club (TNC) merupakan komunitas olahraga di Yogyakarta yang menghadirkan berbagai aktivitas untuk mempertemukan orang-orang melalui olahraga, koneksi, dan pengalaman bersama. Berdiri pada tahun 2026, TNC menaungi aktivitas Tennis, Padel, Yoga, Running, serta kegiatan olahraga sosial lainnya dalam suasana yang inklusif bagi Newbie dan Beginner.",
+  "philosophy": {
+    "brew": "Mempertemukan berbagai orang dan pengalaman untuk menciptakan sesuatu yang unik.",
+    "energy": "Semangat dan koneksi positif yang tumbuh dari setiap aktivitas olahraga bersama.",
+    "stories": "Cerita, pertemanan, dan pengalaman berkesan yang tercipta di setiap pertemuan.",
+    "science": "Rasa penasaran, eksplorasi teknik, dan keberanian untuk mencoba hal-hal baru."
+  },
+  "sports": ["Tennis", "Padel", "Yoga", "Running", "Social Sports"],
+  "stats": {
+    "activeMembers": 30,
+    "weeklySessions": 3,
+    "partnerVenues": 3
+  },
+  "coaches": [
+    "Ferio Anggita",
+    "Gathfan Darmawan"
+  ],
+  "levels": ["Newbie", "Beginner"],
+  "inclusions": [
+    "3 Jam Lapangan (Indoor / Outdoor)",
+    "Fresh Balls Melimpah",
+    "Post-Game Consultation dengan Coach",
+    "E-Book Petunjuk Bermain Tenis Lapangan",
+    "Ballboy (untuk 6+ Players)",
+    "Signature Kopi Susu & Beverage (Full Slot)",
+    "Free Racket Rental (Limited)",
+    "Dokumentasi Foto & Video"
+  ],
+  "venues": [
+    {
+      "id": "uny",
+      "name": "LAPANGAN TENNIS UNY",
+      "type": "INDOOR & OUTDOOR COURT",
+      "facilities": "Indoor & Outdoor · Pencahayaan Malam · Tribun · Kantin/Coffee Shop · Toilet & Parkir Luas",
+      "schedules": "Selasa (18.00–20.00 WIB) & Jumat (20.00–22.00 WIB)"
+    },
+    {
+      "id": "gpw",
+      "name": "LAPANGAN TENNIS GPW",
+      "type": "OUTDOOR FLOODLIT COURT",
+      "facilities": "Outdoor Court · Pencahayaan Malam · Suasana Komunitas Intim · Toilet & Parkir",
+      "schedules": "Sabtu Malam (20.00–22.00 WIB)"
+    },
+    {
+      "id": "joi",
+      "name": "JOI SPORT AND SOCIAL",
+      "type": "INDOOR SPORT & SOCIAL",
+      "facilities": "Indoor Court · Pencahayaan Malam · Coffee Shop & Social Lounge · Toilet & Parkir",
+      "schedules": "Special Session · Coaching & Multi-Sport"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "uny-tuesday",
+      "category": "open-play",
+      "dayTime": "SELASA · 18:00–20:00 WIB",
+      "title": "UNY TUESDAY OPEN PLAY",
+      "fullTitle": "TUESDAY EVENING FUN RALLY · UNY",
+      "court": "UNY",
+      "surface": "LAPANGAN TENNIS UNY (INDOOR/OUTDOOR)",
+      "level": "NEWBIE & BEGINNER",
+      "slotsLeft": 4,
+      "totalSlots": 10,
+      "priceIDR": 65000,
+      "priceRange": "IDR 50.000 – 85.000",
+      "unitLabel": "PLAYER"
+    },
+    {
+      "id": "uny-friday",
+      "category": "open-play",
+      "dayTime": "JUMAT · 20:00–22:00 WIB",
+      "title": "UNY FRIDAY NIGHT RALLY",
+      "fullTitle": "FRIDAY NIGHT NUCLEAR RALLY · UNY",
+      "court": "UNY",
+      "surface": "LAPANGAN TENNIS UNY (FLOODLIT)",
+      "level": "NEWBIE & BEGINNER",
+      "slotsLeft": 3,
+      "totalSlots": 10,
+      "priceIDR": 75000,
+      "priceRange": "IDR 50.000 – 85.000",
+      "unitLabel": "PLAYER"
+    },
+    {
+      "id": "gpw-saturday",
+      "category": "open-play",
+      "dayTime": "SABTU · 20:00–22:00 WIB",
+      "title": "GPW SATURDAY NIGHT PLAY",
+      "fullTitle": "SATURDAY NIGHT SOCIAL TENNIS · GPW",
+      "court": "GPW",
+      "surface": "LAPANGAN TENNIS GPW (OUTDOOR)",
+      "level": "NEWBIE & BEGINNER",
+      "slotsLeft": 5,
+      "totalSlots": 10,
+      "priceIDR": 65000,
+      "priceRange": "IDR 50.000 – 85.000",
+      "unitLabel": "PLAYER"
+    },
+    {
+      "id": "coaching-ferio",
+      "category": "coaching",
+      "dayTime": "SELASA / JUMAT · BY SLOT",
+      "title": "NEWBIE CLINIC · COACH FERIO",
+      "fullTitle": "COACHING CLINIC BERSAMA COACH FERIO ANGGITA",
+      "court": "UNY",
+      "surface": "LAPANGAN TENNIS UNY · FREE RACKET & E-BOOK",
+      "level": "NEWBIE (3–8 ORANG)",
+      "slotsLeft": 3,
+      "totalSlots": 8,
+      "priceIDR": 85000,
+      "priceRange": "IDR 85.000 – 100.000",
+      "unitLabel": "PLAYER"
+    },
+    {
+      "id": "coaching-gathfan",
+      "category": "coaching",
+      "dayTime": "SABTU / MINGGU · BY SLOT",
+      "title": "BEGINNER LAB · COACH GATHFAN",
+      "fullTitle": "COACHING CLINIC BERSAMA COACH GATHFAN DARMAWAN",
+      "court": "JOI",
+      "surface": "JOI SPORT & SOCIAL / GPW · POST-GAME CONSULT",
+      "level": "BEGINNER (3–8 ORANG)",
+      "slotsLeft": 4,
+      "totalSlots": 8,
+      "priceIDR": 95000,
+      "priceRange": "IDR 85.000 – 100.000",
+      "unitLabel": "PLAYER"
+    }
+  ],
+  "payment": {
+    "method": "QRIS",
+    "merchantName": "AMONG.BREW - BEVERAGES",
+    "nmid": "ID1026508193129",
+    "terminalId": "A01",
+    "qrisImage": "/assets/club/qris-tnc.jpg",
+    "qrisSquare": "/assets/club/qris-square.jpg"
+  },
+  "contacts": {
+    "adminName": "Filza Nayla Haziqa",
+    "adminPhone": "081229858442",
+    "adminWhatsappUrl": "https://wa.me/6281229858442",
+    "instagram": "https://www.instagram.com/the.nuclearclub",
+    "threads": "https://www.threads.com/@the.nuclearclub",
+    "reclubCode": "IBBDG",
+    "reclubUrl": "https://reclub.co/clubs/@the-nuclear-club-tnc",
+    "whatsappGroupUrl": "https://chat.whatsapp.com/E3K2G5PkS166wiQIDrRWr2?s=cl&p=a&mlu=4&ilr=4"
+  }
+}

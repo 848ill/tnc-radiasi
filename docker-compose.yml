@@ -1,0 +1,24 @@
+services:
+  tnc-staging:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tnc-radiasi-staging
+    ports:
+      - "8081:8080"
+    environment:
+      - PORT=8080
+      - APP_ENV=staging
+    restart: unless-stopped
+
+  tnc-production:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tnc-radiasi-production
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - APP_ENV=production
+    restart: unless-stopped

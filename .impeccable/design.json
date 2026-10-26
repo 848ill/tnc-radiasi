@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T04:31:00+07:00",
+  "title": "Design System: TNC · The Nuclear Club (radiasi.id)",
+  "extensions": {
+    "colorMeta": {
+      "olive-court": {
+        "role": "primary",
+        "displayName": "Primary Olive Court",
+        "canonical": "#3D4F34",
+        "tonalRamp": ["#141C11", "#212D1C", "#2F3E28", "#3D4F34", "#566B4C", "#768B6B", "#A3B49A", "#D8E1D3"]
+      },
+      "optic-tennis-volt": {
+        "role": "primary",
+        "displayName": "Optic Tennis Volt",
+        "canonical": "#D1E432",
+        "tonalRamp": ["#282D05", "#48500A", "#6D7910", "#96A618", "#B8CA24", "#D1E432", "#E2EF78", "#F3F8C2"]
+      },
+      "sage-olive": {
+        "role": "secondary",
+        "displayName": "Muted Sage Olive",
+        "canonical": "#728367",
+        "tonalRamp": ["#1A2017", "#2C3527", "#414D3A", "#586750", "#728367", "#91A087", "#B5C0AE", "#DCE2D8"]
+      },
+      "chalk-alabaster": {
+        "role": "neutral",
+        "displayName": "Warm Chalk Alabaster",
+        "canonical": "#F3F3EB",
+        "tonalRamp": ["#23231E", "#3E3E36", "#5E5E53", "#838376", "#A9A99C", "#CECEC2", "#E6E6DC", "#F3F3EB"]
+      },
+      "court-bunker": {
+        "role": "neutral",
+        "displayName": "Deep Court Bunker",
+        "canonical": "#121E13",
+        "tonalRamp": ["#0B130C", "#121E13", "#1B2C1C", "#283E29", "#3B563C", "#567457", "#829E83", "#C1D1C2"]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Deep Court Ink",
+        "canonical": "#131F0F",
+        "tonalRamp": ["#0B1209", "#131F0F", "#1E2F18", "#2E4326", "#445E3B", "#627E58", "#8DA684", "#C6D5C1"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Hero",
+        "purpose": "First-viewport club manifesto headline."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Major below-the-fold section titles."
+      },
+      "title": {
+        "displayName": "Console Title",
+        "purpose": "Booking console and membership pass headers."
+      },
+      "body": {
+        "displayName": "Editorial Body",
+        "purpose": "Section lead paragraphs and club descriptions (max 62ch)."
+      },
+      "label": {
+        "displayName": "Tabular Scoreboard Label",
+        "purpose": "Schedule rows, NTRP badges, slot counters, and IDR pricing."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Authoritative deceleration curve for tab switches, slot selection, and button states."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "390px"
+      },
+      {
+        "name": "tablet-collapse",
+        "value": "959px"
+      },
+      {
+        "name": "desktop-spec",
+        "value": "1376px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Volt CTA Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "High-visibility Optic Tennis Volt pill button for slot booking and QRIS checkout.",
+      "html": "<button class=\"ds-btn-volt\">BOOK SLOT &amp; PAY QRIS</button>",
+      "css": ".ds-btn-volt { height: 49px; padding: 0 28px; border: none; border-radius: 25px; background: #D1E432; color: #131F0F; font-family: 'Archivo', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.01em; cursor: pointer; transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1), filter 180ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-volt:hover { filter: brightness(1.05); } .ds-btn-volt:active { transform: scale(0.99); } .ds-btn-volt:focus-visible { outline: 2px solid #D1E432; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ledger Ghost Action Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Outlined court-line button used inside weekly schedule ledger rows.",
+      "html": "<button class=\"ds-btn-ledger\">LOCK SLOT</button>",
+      "css": ".ds-btn-ledger { padding: 10px 20px; border-radius: 20px; border: 1.5px solid #131F0F; background: transparent; color: #131F0F; font-family: 'Archivo', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; transition: background-color 180ms cubic-bezier(0.22, 1, 0.36, 1), color 180ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-ledger:hover { background: #131F0F; color: #F0F2E6; } .ds-btn-ledger:focus-visible { outline: 2px solid #D1E432; outline-offset: 2px; }"
+    },
+    {
+      "name": "Selectable Session Capacity Card",
+      "kind": "card",
+      "refersTo": "card-bunker",
+      "description": "Dark olive session selector displaying court name, remaining slots, and live volt capacity bar.",
+      "html": "<div class=\"ds-session-card\"><div class=\"ds-session-top\"><span>SENAYAN COURT 1 · 19:00</span><span class=\"ds-slots\">3 SLOTS LEFT</span></div><div class=\"ds-track\"><div class=\"ds-fill\"></div></div></div>",
+      "css": ".ds-session-card { width: 360px; padding: 14px 18px; border: 1px solid #D1E432; border-radius: 10px; background: #162315; color: #F0F2E6; font-family: 'Archivo', sans-serif; cursor: pointer; transition: border-color 200ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-session-top { display: flex; justify-content: space-between; font-size: 15px; font-weight: 600; margin-bottom: 10px; } .ds-slots { color: #C7D938; } .ds-track { width: 100%; height: 11px; border-radius: 6px; background: #2C3927; overflow: hidden; } .ds-fill { width: 65%; height: 100%; border-radius: 6px; background: #D1E432; }"
+    },
+    {
+      "name": "NTRP Skill Rating Pill",
+      "kind": "chip",
+      "refersTo": "olive-court",
+      "description": "Compact olive badge indicating required player NTRP tier for a court session.",
+      "html": "<span class=\"ds-ntrp-pill\">INTERMEDIATE 3.5</span>",
+      "css": ".ds-ntrp-pill { display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 6px; background: #3D4F34; color: #F0F2E6; font-family: 'Archivo', sans-serif; font-size: 13px; font-weight: 600; }"
+    },
+    {
+      "name": "Bunker Form Input",
+      "kind": "input",
+      "refersTo": "input-bunker",
+      "description": "Dark court-bunker text field for tournament doubles pair registration.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Player 1 Full Name\" />",
+      "css": ".ds-input { width: 260px; background: #162315; border: 1px solid #3F4E3B; border-radius: 8px; padding: 12px 14px; color: #F0F2E6; font-family: 'Quattrocento Sans', sans-serif; font-size: 15px; } .ds-input::placeholder { color: #C6D0B4; } .ds-input:focus-visible { outline: 2px solid #D1E432; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Atomic Court Ledger",
+    "overview": "TNC (The Nuclear Club) merges the architectural precision of a championship tennis scoreboard with the warm, tactile permanence of a heritage court club. The interface splits into two deliberate zones: an editorial left field on warm chalk alabaster (#F3F3EB) governed by exposed 1.5px baseline rules (#596051), and an operational right-hand booking console housed in deep court bunker olive (#121E13). Every surface prioritizes scannable court schedules, live slot capacity meters, NTRP skill badges, and instant QR Court Pass verification.\n\nRather than relying on decorative SaaS cards, floating glass layers, or generic sports stock cliches, the system treats data rows like court boundary lines. Contrast between the warm chalk editorial canvas and the high-density dark bunker console gives the page an immediate sense of place, while Optic Tennis Volt (#D1E432) is reserved strictly for primary transaction triggers and live slot meters.",
+    "keyCharacteristics": [
+      "Asymmetric 7/5 desktop split pairing editorial club storytelling on warm chalk with an always-live dark bunker booking console.",
+      "Exposed 1px and 1.5px olive-tinted court boundary rules that structure navigation, stat strips, and weekly session ledgers without nested card boxes.",
+      "Single high-visibility accent (#D1E432 Optic Tennis Volt) restricted to primary CTAs, active capacity bars, and live tournament scores.",
+      "Tabular numeric discipline (tabular-nums) across all court times, slot counters, NTRP ratings, and IDR pricing."
+    ],
+    "rules": [
+      {
+        "name": "The Optic Volt Scarcity Rule",
+        "body": "Optic Tennis Volt (#D1E432) never appears as a section background or decorative graphic; it marks only actionable booking triggers and live slot availability.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tinted Court Neutral Rule",
+        "body": "Pure black (#000000), pure white (#FFFFFF), and untinted grays are prohibited; every neutral carries a warm chalk or deep olive court undertone.",
+        "section": "colors"
+      },
+      {
+        "name": "The No-Kicker Rule",
+        "body": "Section headings stand directly on their own authority (<h2>) without small uppercase eyebrow labels or category kickers stacked above them.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Scoreboard Rule",
+        "body": "Every element displaying time (19:00 WIB), remaining slots (3 / 12 SLOTS LEFT), NTRP ratings (3.5), or currency (IDR 125.000) enforces font-variant-numeric: tabular-nums.",
+        "section": "typography"
+      },
+      {
+        "name": "The Court-Line Separation Rule",
+        "body": "Never wrap list rows or schedule items inside individual shadowed cards; separate sibling records with exposed 1px horizontal boundary rules.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do pair Warm Chalk Alabaster (#F3F3EB) editorial sections with Deep Court Bunker (#121E13) operational consoles to preserve the signature contrast of the world.",
+      "Do use 1px and 1.5px olive-tinted rules (#596051, #7D8076, #384534) to divide schedule rows, stats strips, and tournament specifications.",
+      "Do keep font-variant-numeric: tabular-nums active on all prices, slot counts, scores, and timestamps."
+    ],
+    "donts": [
+      "Don't nest bordered cards inside bordered cards beyond the single permitted exception (the two selectable session rows inside the dark right-hand booking console).",
+      "Don't add small uppercase kickers or eyebrows above <h1> or <h2> headings.",
+      "Don't animate layout-triggering properties (width, height, top, left); restrict transitions to transform, opacity, background-color, border-color, and color using cubic-bezier(0.22, 1, 0.36, 1)."
+    ]
+  }
+}

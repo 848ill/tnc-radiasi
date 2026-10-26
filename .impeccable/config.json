@@ -1,0 +1,10 @@
+{
+  "buildPath": "comp",
+  "detector": {
+    "ignoreRules": [
+      "cream-palette"
+    ],
+    "ignoreFiles": [],
+    "ignoreValues": []
+  }
+}

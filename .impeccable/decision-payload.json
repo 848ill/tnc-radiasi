@@ -1,0 +1,233 @@
+{
+  "title": "Pilih Dunia Visual untuk TNC (The Nuclear Club — radiasi.id)",
+  "question": "Roll mengarahkan ke Atomic Court Telemetry Console. Gunakan arah ini, pilih kandidat lain, atau re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Atomic Court Telemetry Console",
+      "kicker": "THE ROLL",
+      "lineage": "Mid-century control room dosimeters & precision court telemetry consoles",
+      "thesis": "Meja kendali lapangan tenis di mana kuota Open Play, intensitas sesi, dan tiket turnamen dipantau sepresisi instrumen reaktor.",
+      "palette": [
+        "#141A12",
+        "#3D4F34",
+        "#D4E635",
+        "#F5F4EE",
+        "#76876B"
+      ],
+      "materials": [
+        "olive-drab anodized steel",
+        "optic-volt phosphor gauges",
+        "warm chalk court lines"
+      ],
+      "viewport": "Panel instrumen Olive Bunker dengan radar lapangan presisi, indikator sisa slot Open Play menyala dalam Optic Volt, filter level NTRP terhubung langsung, dan kartu tiket QR siap-scan.",
+      "risk": "Bisa terasa terlalu teknis jika tipografi klub dan kehangatan komunitas tidak diberi ruang bernapas.",
+      "raised": [
+        {
+          "from": "paper-folds-pleats-deployable-miura-orbit-sheet",
+          "raise": "Memilih level pemain (Beginner / Intermediate / Advanced) langsung mengunci dan memfilter seluruh jadwal sesi serta bracket turnamen secara serempak."
+        },
+        {
+          "from": "aww2-zoo-gardens-guide-map",
+          "raise": "Kapsul status kuota ('SISA 3 SLOT · BOOK') menempel tepat di garis tepi panel lapangan aktif dan bergeser saat status live."
+        },
+        {
+          "from": "craft-making-lowicz-layered-papercut",
+          "raise": "Kedalaman antarkartu tiket dan panel jadwal dibangun murni dari tumpukan bidang warna tegas tanpa bayangan blur generik."
+        },
+        {
+          "from": "hand-drawn-zine-explainer",
+          "raise": "Garis kapur taktis menghubungkan jadwal sesi yang dipilih langsung ke pratinjau E-Ticket QR di sisi kanan."
+        }
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.png"
+    },
+    {
+      "id": "model-pick",
+      "label": "Center Court Mechanical Scoreboard",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Grand Slam mechanical flip-scoreboards & official Order-of-Play sheets",
+      "thesis": "Setiap jadwal Open Play dan turnamen disajikan layaknya papan skor mekanik Center Court yang hidup dan prestisius.",
+      "palette": [
+        "#3D4F34",
+        "#F5F4EE",
+        "#141A12",
+        "#D4E635",
+        "#76876B"
+      ],
+      "materials": [
+        "enameled olive steel plates",
+        "split-flap volt numerals",
+        "heavy cotton scorecard stock"
+      ],
+      "viewport": "Papan Order-of-Play berstruktur tegas di atas bidang Olive Court dan Warm Chalk, dengan angka split-flap Optic Volt yang menghitung mundur sisa slot lapangan secara real-time.",
+      "risk": "Merupakan arah paling natural dan familiar untuk klub tenis modern.",
+      "comp": ".impeccable/mocks/decision/model-pick.png"
+    },
+    {
+      "id": "signals-instruments-vu-meter-bridge",
+      "label": "Court Ballistic Meter Bridge",
+      "verdict": "competitive",
+      "lineage": "Studio VU-meter bridges fused with live court capacity telemetry",
+      "thesis": "Barisan meteran analog sejajar untuk setiap sesi Open Play dan turnamen yang jarumnya bergerak ke zona Optic Volt saat kuota hampir penuh.",
+      "palette": [
+        "#F5F4EE",
+        "#141A12",
+        "#3D4F34",
+        "#D4E635"
+      ],
+      "materials": [
+        "warm chalk meter faces behind glass",
+        "olive steel frame",
+        "optic-volt peak arc"
+      ],
+      "viewport": "Jembatan meteran sesi lapangan berjajar bahu-membahu di bagian atas, memperlihatkan kepadatan slot seluruh sesi minggu ini dalam satu sapuan mata.",
+      "case": "Sangat tajam menampilkan urgensi rebutan slot ('war tiket') secara visual di seluruh lapangan sekaligus.",
+      "risk": "Butuh disiplin grid agar deretan meteran tetap nyaman dibaca di layar mobile.",
+      "comp": ".impeccable/mocks/decision/challenger-vu.png",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-vu-meter-bridge-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-vu-meter-bridge.webp"
+    },
+    {
+      "id": "posters-covers-sleeves-yeye-pop-sleeve",
+      "label": "Club Edition Record Sleeve",
+      "verdict": "competitive",
+      "lineage": "1960s French pop record sleeves fused with modern racket-club lookbooks",
+      "thesis": "Setiap rilis sesi mingguan dan turnamen TNC dikemas seperti sampul rilisan edisi terbatas berlatar Olive pekat.",
+      "palette": [
+        "#3D4F34",
+        "#F5F4EE",
+        "#D4E635",
+        "#141A12"
+      ],
+      "materials": [
+        "flat saturated olive ground",
+        "square-cropped court portrait",
+        "crisp corner tracklist index"
+      ],
+      "viewport": "Bidang Olive penuh dengan potret aksi lapangan terpotong presisi di tengah, logotype TNC berkarakter di atas, dan 4 sesi utama minggu ini tersusun rapi di sudut seperti daftar lagu untuk langsung diklik & dibooking.",
+      "case": "Sangat kuat untuk identitas lifestyle & kultur sosial '@the.nuclearclub' di Instagram.",
+      "risk": "Kapasitas tampilan jadwal dalam satu layar lebih terbatas dibanding papan tabel.",
+      "comp": ".impeccable/mocks/decision/challenger-sleeve.png",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-yeye-pop-sleeve-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/posters-covers-sleeves-yeye-pop-sleeve.webp"
+    },
+    {
+      "id": "paper-folds-pleats-deployable-miura-orbit-sheet",
+      "label": "Deployable Miura Court Sheet",
+      "verdict": "declined",
+      "lineage": "Aerospace Miura-fold tessellated sheets",
+      "thesis": "Jadwal lapangan dan bracket turnamen yang terbentang dari satu lipatan paket kompak menjadi kisi paralelogram.",
+      "palette": [
+        "#F5F4EE",
+        "#3D4F34",
+        "#D4E635",
+        "#141A12"
+      ],
+      "materials": [
+        "matte chalk sheet",
+        "optic-volt foil accent",
+        "olive score creases"
+      ],
+      "viewport": "Lembar jadwal berlipat diagonal yang membuka sel-sel sesi lapangan secara serempak saat ditarik.",
+      "case": "Lipatan diagonal menyulitkan pemindaian cepat jam main dan sisa slot di layar HP.",
+      "kept": "Propagasi filter terhubung: satu klik level pemain langsung memperbarui seluruh sesi dan bracket.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-miura-orbit-sheet-hero.webp"
+    },
+    {
+      "id": "aww2-zoo-gardens-guide-map",
+      "label": "Club Grounds Lobe Map",
+      "verdict": "declined",
+      "lineage": "Illustrated park guide maps with swelling color lobes",
+      "thesis": "Setiap area klub (Open Play, Turnamen, Membership) menjadi pulau warna organik yang dibatasi garis pantai.",
+      "palette": [
+        "#3D4F34",
+        "#F5F4EE",
+        "#D4E635",
+        "#141A12"
+      ],
+      "materials": [
+        "flat unmodulated olive land",
+        "warm chalk ground",
+        "volt capsule pins"
+      ],
+      "viewport": "Bidang warna organik besar yang membelah halaman dengan kapsul tombol kuning-volt di garis tepinya.",
+      "case": "Bentuk organik melengkung bertabrakan dengan geometri siku-siku garis lapangan tenis.",
+      "kept": "Kapsul status kuota yang menempel di garis batas panel aktif dan bergeser saat live.",
+      "hero": "https://impeccable.style/worlds/cards/aww2-zoo-gardens-guide-map-hero.webp"
+    },
+    {
+      "id": "craft-making-lowicz-layered-papercut",
+      "label": "Layered Court Cutout",
+      "verdict": "declined",
+      "lineage": "Symmetrical multi-layer flat papercuts",
+      "thesis": "Kedalaman antarmuka dibangun dari tumpukan potongan warna datar simetris tanpa gradasi.",
+      "palette": [
+        "#141A12",
+        "#3D4F34",
+        "#76876B",
+        "#D4E635"
+      ],
+      "materials": [
+        "flat cut paper layers",
+        "unmixed olive and volt planes"
+      ],
+      "viewport": "Komposisi terpusat berlapis-lapis di mana setiap langkah booking menumpuk lapisan baru di atas halaman.",
+      "case": "Ornamen bundar simetris kurang cocok untuk tabel jadwal sesi dan leaderboard olahraga.",
+      "kept": "Kedalaman antarkomponen murni melalui tumpukan bidang warna datar yang kontras tanpa drop-shadow kabur.",
+      "hero": "https://impeccable.style/worlds/cards/craft-making-lowicz-layered-papercut-hero.webp"
+    },
+    {
+      "id": "hand-drawn-zine-explainer",
+      "label": "Courtside Tactical Zine",
+      "verdict": "declined",
+      "lineage": "Hand-drawn marker zines & coach clipboard sketches",
+      "thesis": "Panduan klub dan jadwal sesi dengan coretan taktis spidol dan panah strategi lapangan.",
+      "palette": [
+        "#F5F4EE",
+        "#141A12",
+        "#D4E635",
+        "#3D4F34"
+      ],
+      "materials": [
+        "warm chalk paper",
+        "dark olive ink",
+        "volt highlighter swipes"
+      ],
+      "viewport": "Panel bergaya catatan pelatih dengan panah gambar tangan yang menunjuk ke slot sesi yang masih kosong.",
+      "case": "Gaya komik/doodle mengurangi kesan eksklusif dan prestise dari The Nuclear Club.",
+      "kept": "Garis kapur taktis yang menghubungkan sesi terpilih langsung ke tiket QR.",
+      "hero": "https://impeccable.style/worlds/cards/hand-drawn-zine-explainer-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "comp",
+    "toggle": true
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "Modern Sports Club Standard",
+    "thesis": "Tampilan klub tenis & booking modern standar industri yang bersih, rapi, dan familiar.",
+    "palette": [
+      "#F5F4EE",
+      "#3D4F34",
+      "#141A12",
+      "#D4E635"
+    ],
+    "materials": [
+      "clean editorial grid",
+      "court photography",
+      "crisp booking cards"
+    ],
+    "viewport": "Hero klub tenis bersih dengan tombol Book Session, diikuti grid kartu jadwal Open Play, highlight turnamen, dan paket membership.",
+    "risk": "Sangat aman dan mudah dipahami, namun tidak se-ikonik arah eksperimental di atas.",
+    "comp": ".impeccable/mocks/decision/canon.png"
+  },
+  "steer": true
+}
