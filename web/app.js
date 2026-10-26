@@ -199,6 +199,8 @@
     const surfacePill = document.getElementById('hero-surface-pill');
     const timePill = document.getElementById('hero-time-pill');
     const telemetryText = document.getElementById('hero-telemetry-text');
+    const mobileTitleEl = document.getElementById('mobile-sticky-title');
+    const mobileSubEl = document.getElementById('mobile-sticky-sub');
 
     if (priceEl) priceEl.textContent = active.priceLabel;
     if (labelEl) labelEl.textContent = active.feeLabel;
@@ -207,6 +209,8 @@
     if (surfacePill) surfacePill.textContent = active.surface;
     if (timePill) timePill.textContent = active.startTime;
     if (telemetryText) telemetryText.textContent = active.title + ' WIB';
+    if (mobileTitleEl) mobileTitleEl.textContent = active.title;
+    if (mobileSubEl) mobileSubEl.textContent = active.priceLabel + ' · ' + active.slotsLeft + ' SLOTS LEFT';
   }
 
   function findSessionById(id) {
@@ -454,6 +458,13 @@
       });
 
       syncHeroCards(true);
+
+      if (window.innerWidth <= 980) {
+        const bookingConsole = document.getElementById('hero-booking-console');
+        if (bookingConsole) {
+          bookingConsole.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
     });
   });
 
@@ -471,15 +482,16 @@
     });
   }
 
-  // Primary Hero Book CTA Button
-  const bookBtn = document.getElementById('hero-book-btn');
-  if (bookBtn) {
-    bookBtn.addEventListener('click', function () {
+  // Primary Hero Book CTA Button & Mobile Sticky Bottom CTA Button
+  ['hero-book-btn', 'mobile-sticky-book-btn'].forEach(function (btnId) {
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
+    btn.addEventListener('click', function () {
       const list = SESSIONS[currentCategory] || SESSIONS['open-play'];
       const active = list[selectedIndex] || list[0];
       executeSessionBooking(active);
     });
-  }
+  });
 
   // Open Pass Preview button & QR Tile click
   ['open-pass-preview-btn', 'hero-qr-trigger'].forEach(function (id) {
@@ -783,21 +795,30 @@
 
     let isDragging = false;
     let prevX = 0;
+    let prevY = 0;
     canvas.addEventListener('pointerdown', function (e) {
       isDragging = true;
-      autoOrbit = false;
       prevX = e.clientX;
+      prevY = e.clientY;
     });
     window.addEventListener('pointerup', function () {
+      isDragging = false;
+    });
+    window.addEventListener('pointercancel', function () {
       isDragging = false;
     });
     window.addEventListener('pointermove', function (e) {
       if (!isDragging) return;
       const dx = e.clientX - prevX;
+      const dy = e.clientY - prevY;
       prevX = e.clientX;
-      orbitAngle -= dx * 0.007;
-      camTarget.x = Math.sin(orbitAngle) * 22;
-      camTarget.z = Math.cos(orbitAngle) * 22;
+      prevY = e.clientY;
+      if (Math.abs(dx) > Math.abs(dy)) {
+        autoOrbit = false;
+        orbitAngle -= dx * 0.007;
+        camTarget.x = Math.sin(orbitAngle) * 22;
+        camTarget.z = Math.cos(orbitAngle) * 22;
+      }
     });
 
     function resize() {

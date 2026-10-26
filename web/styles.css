@@ -267,6 +267,7 @@ a {
   background: var(--ink-dark);
   opacity: 0;
   pointer-events: none;
+  touch-action: pan-y;
   transition: opacity 280ms var(--ease-out-expo);
 }
 
@@ -1261,6 +1262,7 @@ a {
   display: block;
   background: var(--ink-dark);
   cursor: grab;
+  touch-action: pan-y;
 }
 
 .arena-overlay-bar {
@@ -1631,71 +1633,267 @@ a {
   cursor: pointer;
 }
 
+/* Mobile Sticky Bottom Quick-Book Bar (Hidden on Desktop) */
+.mobile-bottom-bar {
+  display: none;
+}
+
 /* ==========================================================================
-   5. RESPONSIVE TABLET & MOBILE ADAPTATION (< 980px)
+   5. RESPONSIVE TABLET & MOBILE ADAPTATION (< 980px & < 680px)
    ========================================================================== */
 @media (max-width: 980px) {
   .club-container {
     padding: 0 20px;
   }
 
+  /* Compact Sticky Top Header with Horizontal Pill Scroll */
   .site-header-inner {
     height: auto;
-    padding: 14px 20px;
+    padding: 10px 16px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .nav-brand-text {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .site-nav {
-    flex-wrap: wrap;
-    gap: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 14px;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link-item {
+    font-size: 14px;
+    padding: 6px 2px;
+    flex-shrink: 0;
   }
 
   .nav-link-divider {
     display: none;
   }
 
+  .nav-reclub-pill {
+    padding: 6px 12px;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  /* Hero Section & Asymmetric Grid Stacking */
   .hero-section {
     background: var(--bg-chalk);
   }
 
   .hero-split-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .hero-left-col {
-    padding: 24px 0 12px;
+    padding: 20px 0 8px;
+    gap: 16px;
   }
 
   .hero-headline-text {
     font-size: 42px;
+    line-height: 1.02;
   }
 
-  .hero-right-col {
-    background: transparent;
-    padding: 0 0 30px;
+  .hero-headline-text br {
+    display: none;
+  }
+
+  /* Hero 3-Column Stats Strip — Stack Number Above Label so Zero Horizontal Crush */
+  .hero-stats-strip {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .stat-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .stat-number {
+    font-size: 31px;
+  }
+
+  /* Hero Community Photo & 3D Plate Controls */
+  .hero-plate-frame {
+    height: 248px;
+  }
+
+  .plate-hud-top {
+    left: 10px;
+    right: 10px;
+    top: 10px;
+  }
+
+  .plate-mode-switch {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+
+  .plate-mode-btn {
+    width: 100%;
+    padding: 8px 6px;
+    text-align: center;
   }
 
   .plate-telemetry-badge {
     display: none;
   }
 
-  .sched-row {
-    grid-template-columns: 1fr;
+  .plate-camera-bar {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 6px;
   }
 
-  .sched-col-time {
-    text-align: left;
+  .cam-pill {
+    width: 100%;
+    padding: 8px 6px;
+    text-align: center;
+  }
+
+  /* Hero Weekly Schedule Rows — Crisp 2-Column Touch Rows */
+  .sched-row {
+    grid-template-columns: 1fr auto;
+    gap: 4px 12px;
+    padding: 14px 12px;
+  }
+
+  .sched-col-tag {
+    grid-column: 1;
     color: var(--bg-olive);
+  }
+
+  .sched-col-court {
+    grid-column: 1;
+    color: var(--ink-dark);
+  }
+
+  .sched-col-time {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    text-align: right;
+    align-self: center;
+    background: var(--bg-chalk-elevated);
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: var(--ink-dark);
+  }
+
+  /* Right Column: Dark Bunker Booking Console on Mobile */
+  .hero-right-col {
+    background: transparent;
+    padding: 0 0 28px;
+  }
+
+  .bunker-console-card {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .booking-heading-text {
+    font-size: 31px;
+    line-height: 1.12;
+  }
+
+  .booking-heading-text br {
+    display: none;
+  }
+
+  .booking-tabs-bar {
+    height: 46px;
+  }
+
+  .tab-btn {
+    height: 36px;
+    padding: 0 6px;
+  }
+
+  .session-card-top {
+    white-space: normal;
+    align-items: flex-start;
+  }
+
+  .session-court-title {
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  .telemetry-meta-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .telemetry-pill {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .telemetry-time {
+    text-align: center;
+  }
+
+  .telemetry-input-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 12px 14px;
+  }
+
+  /* 17px font-size prevents iOS Safari forced viewport zoom on input focus */
+  .telemetry-name-input {
+    font-size: 17px;
+    width: 100%;
+    padding: 4px 0;
+  }
+
+  .qr-pass-row {
+    gap: 14px;
+  }
+
+  .qr-white-tile {
+    width: 80px;
+    height: 80px;
+  }
+
+  .price-line-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  /* Filter Console & Below-the-Fold Rhythm */
+  .filter-console-band {
+    padding: 22px 0;
   }
 
   .filter-console-grid,
   .tournament-layout,
-  .philosophy-grid,
-  .inclusions-grid,
   .qris-showcase-split,
   .courts-roster-grid,
   .tnc-photo-grid,
@@ -1712,30 +1910,284 @@ a {
     padding-bottom: 12px;
   }
 
+  .filter-select {
+    font-size: 17px;
+  }
+
   .filter-action-btn {
     width: 100%;
   }
 
-  .section-header-row,
-  .inclusions-header,
-  .footer-grid,
-  .footer-bottom-bar,
-  .pass-modal-actions {
+  .club-section {
+    padding: 52px 0 48px;
+  }
+
+  .section-header-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
   }
 
+  .section-title {
+    font-size: 31px;
+    max-width: 100%;
+  }
+
+  /* 4 Pillars & 8 Inclusions in Scannable 2-Column Mobile Grid */
+  .philosophy-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  .inclusions-bunker-box {
+    padding: 20px;
+  }
+
+  .inclusions-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+  }
+
+  .inclusions-cta {
+    width: 100%;
+  }
+
+  .inclusions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .inclusion-item {
+    padding: 14px;
+  }
+
+  /* Weekly Schedule Ledger — Structured Mobile Session Cards */
   .ledger-row-head {
     display: none;
   }
 
   .ledger-row {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
+    background: var(--bg-chalk-elevated);
+    border: 1px solid var(--rule-table);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+
+  .ledger-cell-Day {
+    color: var(--bg-olive);
   }
 
   .capacity-bar {
     width: 100%;
+    background: var(--bg-chalk);
+  }
+
+  .ledger-book-btn {
+    width: 100%;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ink-dark);
+    color: var(--volt);
+  }
+
+  /* Booking Flow & QRIS Section on Mobile */
+  .tournament-spec-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 12px 0;
+  }
+
+  .tournament-spec-val {
+    text-align: left;
+    color: var(--volt-text);
+  }
+
+  .community-cta-strip {
+    flex-direction: column;
+  }
+
+  .community-link-pill {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 20px;
+  }
+
+  /* 3D Arena Stage Mobile HUD */
+  .three-arena-stage {
+    height: 320px;
+    margin-bottom: 20px;
+  }
+
+  .arena-overlay-bar {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .arena-stat-volt {
+    display: none;
+  }
+
+  .arena-stat-chip {
+    width: 100%;
+    text-align: center;
+    padding: 6px 10px;
+  }
+
+  .arena-cam-controls {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .arena-cam-btn {
+    width: 100%;
+    padding: 8px 6px;
+    text-align: center;
+  }
+
+  .tnc-photo-item img {
+    height: 240px;
+  }
+
+  .tnc-photo-caption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  /* Footer & Sticky Bottom Bar Clearance */
+  .club-footer {
+    padding: 36px 0 112px;
+  }
+
+  .footer-grid,
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  /* Mobile Sticky Bottom Quick-Book Bar */
+  .mobile-bottom-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 45;
+    background: var(--bg-bunker);
+    border-top: 1.5px solid var(--volt);
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mobile-bottom-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .mobile-bottom-title {
+    font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink-light);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-bottom-sub {
+    font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--volt-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-bottom-cta {
+    height: 44px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 25px;
+    background: var(--volt);
+    color: var(--ink-dark);
+    font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  /* Scrollable Bottom-Sheet Pass Modal on Mobile */
+  .pass-modal-backdrop {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  .pass-modal-dialog {
+    max-height: 90dvh;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .pass-modal-heading {
+    font-size: 17px;
+  }
+
+  .modal-qris-img {
+    width: 160px;
+  }
+
+  .pass-modal-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .pass-modal-btn,
+  .pass-modal-secondary-btn {
+    width: 100%;
   }
 }
+
+@media (max-width: 540px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .inclusions-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
