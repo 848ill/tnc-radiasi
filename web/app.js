@@ -95,6 +95,22 @@
     ],
     multisport: [
       {
+        id: 'yoga-nov-01',
+        title: 'YOGA AT THE COURT · 1 NOV',
+        court: 'JOI',
+        surface: 'JOI SPORTS & SOCIAL · COACH NILA',
+        ntrp: 'BEGINNER FRIENDLY · 200-HR CYT',
+        startTime: 'MINGGU 1 NOV · 06:45 WIB',
+        slotsLeft: 30,
+        totalSlots: 30,
+        barPct: 20,
+        priceIDR: 75000,
+        priceLabel: 'EARLY BIRD IDR 75.000',
+        feeLabel: 'WOMEN OF NUCLEAR × TNC YOGA',
+        serial: 'QRIS AMONG.BREW',
+        subSerial: 'HANYA 30 SPOTS · WA +62 851-5771-9823'
+      },
+      {
         id: 'multisport-social',
         title: 'JOI SPORT & SOCIAL · PADEL/TENNIS',
         court: 'JOI',
@@ -625,6 +641,77 @@
       window.open(waUrl, '_blank', 'noopener');
     });
   }
+
+  // Temporary 1 Nov Yoga Event Form & QRIS Handlers
+  const yogaForm = document.getElementById('yoga-event-reg-form');
+  if (yogaForm) {
+    yogaForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('yoga-reg-name');
+      const waInput = document.getElementById('yoga-reg-wa');
+      const matSelect = document.getElementById('yoga-reg-mat');
+
+      const playerName = (nameInput && nameInput.value.trim()) || 'PESERTA YOGA 1 NOV';
+      const playerWA = (waInput && waInput.value.trim()) || '-';
+      const matOption = (matSelect && matSelect.value) || 'Bawa Matras Sendiri';
+
+      const ticket = {
+        ticketId: 'YOGA-NOV1-' + (101 + issuedTickets.length),
+        ticketType: 'WOMEN OF NUCLEAR × TNC YOGA PASS',
+        sessionId: 'yoga-nov-01',
+        sessionTitle: 'YOGA AT THE COURT · MINGGU 1 NOV 2026',
+        courtSurface: 'JOI SPORTS & SOCIAL (JL. BIMA NO.88 SLEMAN)',
+        ntrpLevel: 'BEGINNER FRIENDLY · COACH NILA (200-HR CYT)',
+        playerName: playerName,
+        priceIdr: 75000,
+        qrPassHash: 'ID1026508193129',
+        status: 'AWAITING_QRIS_CONFIRMATION'
+      };
+
+      recordNewTicket(ticket);
+      openPassModal(ticket);
+
+      // Dedicated Event WhatsApp format for +62 851-5771-9823
+      const text =
+        'Halo Admin Women of Nuclear × The NUCLEAR Club! 👋\n\n' +
+        'Saya sudah mengisi form registrasi "Yoga at the Court" (Minggu, 1 Nov 2026 @ Joi Sports & Social):\n\n' +
+        '• Nama: ' + playerName + '\n' +
+        '• No. WhatsApp: ' + playerWA + '\n' +
+        '• Opsi Matras: ' + matOption + '\n' +
+        '• Biaya: Early Bird IDR 75.000 (QRIS AMONG.BREW)\n' +
+        '• Pass ID: #' + ticket.ticketId + '\n\n' +
+        'Berikut bukti transfer QRIS saya. Mohon konfirmasi slotnya ya! Terima kasih ♡';
+
+      const waEventUrl = 'https://wa.me/6285157719823?text=' + encodeURIComponent(text);
+      const modalWaBtn = document.getElementById('modal-wa-admin-btn');
+      if (modalWaBtn) {
+        modalWaBtn.href = waEventUrl;
+      }
+      window.open(waEventUrl, '_blank', 'noopener');
+    });
+  }
+
+  // Open QRIS Modal trigger from Yoga section
+  ['yoga-open-qris-modal', 'yoga-qris-trigger'].forEach(function (id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('click', function () {
+      const nameInput = document.getElementById('yoga-reg-name');
+      const playerName = (nameInput && nameInput.value.trim()) || 'PESERTA YOGA 1 NOV';
+      openPassModal({
+        ticketId: 'YOGA-NOV1-PREVIEW',
+        ticketType: 'WOMEN OF NUCLEAR × TNC YOGA PASS',
+        sessionId: 'yoga-nov-01',
+        sessionTitle: 'YOGA AT THE COURT · MINGGU 1 NOV 2026',
+        courtSurface: 'JOI SPORTS & SOCIAL (JL. BIMA NO.88 SLEMAN)',
+        ntrpLevel: 'BEGINNER FRIENDLY · COACH NILA (200-HR CYT)',
+        playerName: playerName,
+        priceIdr: 75000,
+        qrPassHash: 'ID1026508193129',
+        status: 'SCAN_QRIS_AMONG_BREW'
+      });
+    });
+  });
 
   /* ==========================================================================
      5. THREE.JS 3D YOGYAKARTA TENNIS COURTS (UNY, GPW, JOI) & HAWK-EYE

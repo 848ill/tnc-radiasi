@@ -160,6 +160,432 @@ a {
   color: var(--volt);
 }
 
+.nav-event-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 16px;
+  background: var(--volt);
+  color: var(--ink-dark);
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: filter 180ms var(--ease-out-expo), transform 180ms var(--ease-out-expo);
+}
+
+.nav-event-pill:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   1B. TEMPORARY EVENT SPOTLIGHT: 1 NOV 2026 (WOMEN OF NUCLEAR × TNC YOGA)
+   ========================================================================== */
+.event-spotlight-section {
+  background: var(--bg-bunker);
+  color: var(--ink-light);
+  border-bottom: 2px solid var(--volt);
+  padding: 48px 0;
+}
+
+.event-badge-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.event-urgent-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--volt);
+  color: var(--ink-dark);
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.event-spots-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-card);
+  color: var(--volt-text);
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.event-split-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.42fr) minmax(360px, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.event-headline {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink-light);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.event-tagline {
+  font-family: 'Quattrocento Sans', 'Archivo', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--volt-text);
+  margin-bottom: 16px;
+}
+
+.event-philosophy-quote {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-sage-light);
+  font-style: italic;
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 2px solid var(--volt);
+}
+
+.event-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.event-spec-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-card);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.event-spec-label {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-sage-light);
+}
+
+.event-spec-val {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink-light);
+}
+
+.event-price-volt {
+  color: var(--volt-text);
+}
+
+.event-spec-sub {
+  font-size: 14px;
+  color: var(--ink-sage-light);
+}
+
+.event-benefits-block {
+  margin-top: 16px;
+}
+
+.event-benefits-heading {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--volt-text);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.event-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.event-benefit-pill {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-card);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-light);
+}
+
+.event-mat-notice {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-sage-light);
+}
+
+/* Event Right Column: Booking & QRIS Console */
+.event-bunker-card {
+  background: var(--bg-panel);
+  border: 1.5px solid var(--volt);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.event-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.event-card-title {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink-light);
+  text-transform: uppercase;
+}
+
+.event-card-quota {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--volt-text);
+}
+
+.event-reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.event-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.event-input-group label {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-sage-light);
+}
+
+.event-input {
+  width: 100%;
+  background: var(--bg-bunker);
+  border: 1px solid var(--border-card);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: 'Quattrocento Sans', 'Archivo', sans-serif;
+  font-size: 17px;
+  color: var(--ink-light);
+}
+
+.event-input:focus {
+  outline: 2px solid var(--volt);
+  outline-offset: 2px;
+}
+
+.event-price-strip {
+  background: var(--bg-bunker);
+  border: 1px solid var(--border-card);
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-price-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.event-price-type {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-sage-light);
+}
+
+.event-price-num {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--volt-text);
+}
+
+.event-price-badge {
+  background: var(--volt);
+  color: var(--ink-dark);
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.event-qris-box {
+  background: var(--bg-bunker);
+  border: 1px solid var(--border-card);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.event-qris-thumb {
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+  background: var(--bg-chalk);
+  border-radius: 6px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.event-qris-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
+.event-qris-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.event-qris-label {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--volt-text);
+}
+
+.event-qris-merchant {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-light);
+}
+
+.event-qris-nmid {
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  color: var(--ink-sage-light);
+}
+
+.event-qris-link {
+  border: none;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--volt-text);
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.event-qris-link:hover {
+  text-decoration: underline;
+}
+
+.event-submit-btn {
+  width: 100%;
+  height: 49px;
+  border: none;
+  border-radius: 25px;
+  background: var(--volt);
+  color: var(--ink-dark);
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 180ms var(--ease-out-expo), transform 180ms var(--ease-out-expo);
+}
+
+.event-submit-btn:hover {
+  filter: brightness(1.06);
+}
+
+.event-submit-btn:active {
+  transform: scale(0.99);
+}
+
+.event-direct-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.event-wa-btn,
+.event-sid-btn {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: 'Archivo', 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 180ms var(--ease-out-expo), color 180ms var(--ease-out-expo), border-color 180ms var(--ease-out-expo);
+}
+
+.event-wa-btn {
+  background: var(--bg-bunker);
+  border: 1px solid var(--border-card);
+  color: var(--ink-light);
+}
+
+.event-wa-btn:hover {
+  border-color: var(--volt);
+  color: var(--volt-text);
+}
+
+.event-sid-btn {
+  background: var(--bg-bunker);
+  border: 1px solid var(--border-card);
+  color: var(--ink-sage-light);
+}
+
+.event-sid-btn:hover {
+  color: var(--ink-light);
+}
+
 /* ==========================================================================
    2. HERO SECTION: 62% EDITORIAL CHALK LEFT + 38% SAGE/BUNKER CONSOLE RIGHT
    ========================================================================== */
@@ -1690,6 +2116,35 @@ a {
     padding: 6px 12px;
     flex-shrink: 0;
     margin-left: auto;
+  }
+
+  .nav-event-pill {
+    padding: 6px 12px;
+    flex-shrink: 0;
+  }
+
+  /* Event Spotlight Responsive */
+  .event-spotlight-section {
+    padding: 32px 0;
+  }
+
+  .event-split-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .event-headline {
+    font-size: 31px;
+  }
+
+  .event-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .event-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   /* Hero Section & Asymmetric Grid Stacking */

@@ -130,6 +130,21 @@
       "priceIDR": 95000,
       "priceRange": "IDR 85.000 – 100.000",
       "unitLabel": "PLAYER"
+    },
+    {
+      "id": "yoga-nov-01",
+      "category": "multisport",
+      "dayTime": "MINGGU · 01 NOV 2026 · 06:45 WIB",
+      "title": "YOGA AT THE COURT",
+      "fullTitle": "WOMEN OF NUCLEAR × TNC PRESENTS: YOGA AT THE COURT",
+      "court": "JOI",
+      "surface": "JOI SPORTS & SOCIAL (JL. BIMA NO.88 SLEMAN)",
+      "level": "BEGINNER FRIENDLY · COACH NILA (200-HR CYT)",
+      "slotsLeft": 30,
+      "totalSlots": 30,
+      "priceIDR": 75000,
+      "priceRange": "EARLY BIRD IDR 75.000",
+      "unitLabel": "SPOT"
     }
   ],
   "payment": {
