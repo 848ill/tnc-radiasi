@@ -156,7 +156,7 @@
 
   function buildWhatsAppConfirmationURL(playerName, sessionTitle, ticketId) {
     const msg =
-      'Halo Admin TNC (Kak Filza), saya ingin konfirmasi pendaftaran & bukti transfer QRIS The NUCLEAR Club:\n\n' +
+      'Halo Admin TNC, saya ingin konfirmasi pendaftaran & bukti transfer QRIS The NUCLEAR Club:\n\n' +
       '• Nama Pemain: ' + (playerName || 'Member TNC') + '\n' +
       '• Sesi: ' + (sessionTitle || 'Open Play Tennis') + '\n' +
       '• Pass ID: #' + (ticketId || 'TNC-PASS') + '\n' +
@@ -270,6 +270,7 @@
     const waBtn = document.getElementById('modal-wa-admin-btn');
     if (waBtn) {
       waBtn.href = buildWhatsAppConfirmationURL(ticket.playerName, ticket.sessionTitle, ticket.ticketId);
+      waBtn.textContent = 'KONFIRMASI BUKTI QRIS KE WA ADMIN TNC →';
     }
 
     modal.hidden = false;
@@ -419,7 +420,7 @@
     };
 
     sessionObj.serial = 'PASS LOCKED · #' + ticket.ticketId;
-    sessionObj.subSerial = playerName.toUpperCase() + ' · KONFIRMASI WA FILZA';
+    sessionObj.subSerial = playerName.toUpperCase() + ' · KONFIRMASI WA ADMIN TNC';
 
     syncHeroCards(true);
     updateLedgerRowUI(sessionObj.id, sessionObj.slotsLeft, sessionObj.totalSlots);
@@ -614,7 +615,7 @@
     });
   }
 
-  // Direct WhatsApp Confirmation Form to Admin Filza Nayla Haziqa
+  // Direct WhatsApp Confirmation Form to Admin TNC
   const waConfirmForm = document.getElementById('wa-confirm-form');
   if (waConfirmForm) {
     waConfirmForm.addEventListener('submit', async function (e) {
@@ -637,8 +638,7 @@
       };
 
       recordNewTicket(ticket);
-      const waUrl = buildWhatsAppConfirmationURL(playerName, chosenSession, ticket.ticketId);
-      window.open(waUrl, '_blank', 'noopener');
+      openPassModal(ticket);
     });
   }
 
@@ -689,8 +689,8 @@
       const modalWaBtn = document.getElementById('modal-wa-admin-btn');
       if (modalWaBtn) {
         modalWaBtn.href = waEventUrl;
+        modalWaBtn.textContent = 'KONFIRMASI BUKTI QRIS KE WA ADMIN TNC →';
       }
-      window.open(waEventUrl, '_blank', 'noopener');
     });
   }
 
