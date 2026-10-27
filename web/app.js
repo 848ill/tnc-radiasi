@@ -671,6 +671,9 @@
       recordNewTicket(ticket);
       openPassModal(ticket);
 
+      // Otomatis kirim data ke Google Spreadsheet via Apps Script Webhook
+      sendToGoogleSheet(ticket, playerWA, matOption);
+
       // Dedicated Event WhatsApp format for +62 851-5771-9823
       const text =
         'Halo Admin Women of Nuclear × The NUCLEAR Club! 👋\n\n' +
@@ -689,6 +692,32 @@
       }
       window.open(waEventUrl, '_blank', 'noopener');
     });
+  }
+
+  // Google Sheets Webhook Integration
+  const GOOGLE_SHEETS_WEBHOOK_URL =
+    'https://script.google.com/macros/s/AKfycbz_r9TzB3LoEAYDFM0M-e7vPj67KxxSj8gBCgmqKX1ye8_ddM6kghmkNy9hRLeB0k_yRA/exec';
+
+  async function sendToGoogleSheet(ticket, phone, mat) {
+    if (!GOOGLE_SHEETS_WEBHOOK_URL) return;
+    try {
+      const payload = {
+        ticketId: ticket.ticketId,
+        playerName: ticket.playerName,
+        playerPhone: phone,
+        matOption: mat,
+        sessionTitle: ticket.sessionTitle,
+        priceIdr: ticket.priceIdr
+      };
+      await fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+    } catch (err) {
+      console.warn('Google Sheet webhook sync notice:', err);
+    }
   }
 
   // Open QRIS Modal trigger from Yoga section
